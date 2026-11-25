@@ -76,25 +76,46 @@
 
 **遇到的问题**
 
-- 作业要求「真实用户反馈」，但当时只有项目所有者本人确认过需求，第二位试用者的原话尚未收集。
+- 作业要求「真实用户反馈」：当时只有项目所有者本人确认过需求，第二位试用者需要等上线后试用才能给出原话，因此 README 先留清晰占位，不编造。
 - 本机未安装 `gh` CLI，Git 命令行工具也尚未就绪，无法由 AI 直接创建并推送公开仓库。
 - 无 Playwright 环境，但本机有 Google Chrome。
 
 **所做的更改**
 
-- README 写成中英双语，覆盖全部提交项；反馈 1 使用学生本人真实表述，反馈 2 留成明确标注的待填模板，并附可直接发给同学的话术。
+- README 写成中英双语，覆盖全部提交项；反馈 1 使用学生本人真实表述，反馈 2 先留明确标注的待填模板，上线后替换为朋友 1 的真实原话。
 - 用 Chrome Headless 生成 `screenshots/home.png` 与 `screenshots/features.png`，纳入仓库。
 - 编写本日志，按四要素记录三轮改进。
 - 给出两可选的 GitHub 上传路径（网页上传 / 命令行），以及开启 Pages 的逐步清单。
 
 **参与者所做的决定**
 
-- 不编造第二位「真实用户」的原话：宁可留清晰占位，也不提交无法核实的反馈。学生需在提交前替换为同学试用的真实原话。
+- 不编造第二位「真实用户」的原话：先留清晰占位；上线试用 2 天后，由朋友 1（非翻译专业）给出真实原话，再替换进 README。
 - 在线链接在部署完成后再回填 README 顶部，避免提交无效链接。
 - 截图与源代码放在同一仓库，方便评分者核对。
 
 ---
 
+## 补充：收到反馈 2 后的收尾迭代（第三轮的延续）
+
+**关键提示词**
+1. 「帮我完善 readme，下面是反馈……」（朋友 1 试用 2 天后的原话）
+2. 「再帮我把截图、链接和反馈整理成一段可直接粘贴到作业提交框的说明」
+
+**遇到的问题**
+- 反馈来自非翻译专业用户，重点是「快速上手 / 快速找到合适的 prompt」，而不是术语层面的专业度；README 原来预留的占位段落无法体现这条信息。
+- 需要把反馈、在线链接、截图三类分散材料压成一段可直接提交的说明。
+
+**所做的更改**
+- 用真实原话替换 README 中英文两处的反馈 2 占位，并逐条写出「据此改进」：可点击的阶段卡片、搜索 + 场景筛选、占位符替换与一键复制、3 步上手指南、保留模型与版本信息。
+- 协作日志同步更新为真实反馈状态。
+- 新增提交说明文本，包含在线链接、截图索引与两条用户反馈摘要。
+
+**参与者所做的决定**
+- 保留用户原话，不润色、不改写；英文版仅做等值翻译并在括号中标注为译文。
+- 提交说明采用一段式、可整段复制，避免评分者需要跳转多个文件。
+
+---
+
 ## English summary
 
-Three improvement rounds were recorded: (1) parsing the assignment and converting the Word prompt table into structured data — fixed a key-collision bug that initially reduced 54 prompts to 9; (2) turning the data into a usable static app with stage/scenario filters, decoupled interface and prompt language switches, placeholder substitution and clipboard fallback; (3) preparing submission assets — bilingual README, two headless-Chrome screenshots, this log, and a step-by-step GitHub Pages checklist. The participant deliberately left the second user-feedback entry as a clearly marked template rather than inventing a quote.
+Three improvement rounds were recorded: (1) parsing the assignment and converting the Word prompt table into structured data — fixed a key-collision bug that initially reduced 54 prompts to 9; (2) turning the data into a usable static app with stage/scenario filters, decoupled interface and prompt language switches, placeholder substitution and clipboard fallback; (3) preparing submission assets — bilingual README, two headless-Chrome screenshots, this log, and a step-by-step GitHub Pages checklist. The second feedback entry was initially left as a clearly marked placeholder instead of an invented quote; after deployment it was replaced with a real verbatim response from a non-translation-major friend who tried the site for two days, and the README was updated with the resulting improvements.

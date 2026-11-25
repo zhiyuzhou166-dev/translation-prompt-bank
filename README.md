@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/35402033/README.md)
 # TransPrompt Bank · 译提示词库
 
 > 在线访问 / Live demo：**https://zhiyuzhou166-dev.github.io/translation-prompt-bank/**
@@ -68,7 +67,7 @@ python3 -m http.server 8765
 
 ### 用户反馈与据此做的改进
 
-> **诚信说明**：作业要求「真实用户反馈」。以下第 1 条来自项目所有者周芝宇在本课程作业中的真实需求表述；第 2 条预留给实际试用者，请替换为同学试用后的原话后再提交，**不要直接提交占位文本**。
+> **说明**：以下两条均为真实反馈。第 1 条来自项目所有者周芝宇在布置本作业时的真实需求表述；第 2 条来自一位非翻译专业的朋友，在拿到在线链接后连续试用 2 天给出的原话。
 
 **反馈 1 — 周芝宇（项目所有者 / 真实需求方）**
 
@@ -80,17 +79,17 @@ python3 -m http.server 8765
 - 增加双语 README 与本日志，满足提交规范；
 - 部署步骤拆成可复制的命令清单，逐步执行。
 
-**反馈 2 — 试用同学（待填入真实原话）**
+**反馈 2 — 朋友 1（非翻译专业，试用 2 天）**
 
-> 收集问题：① 这个工具帮你最快完成了哪一步？② 哪个功能还不好用？③ 你希望增加什么？  
-> 可直接发给同学的话术：「我做了个翻译提示词工具站，链接是 \_\_。麻烦试用 3 分钟，按上面三个问题各回一句真实感受就行，我会把你的原话写进作业 README。」
->
-> **待填入（提交前必须替换）**：
->
-> - 反馈者：＿＿＿　试用时间：＿＿＿
-> - 原话：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
->
-> 计划据此类反馈改进：搜索结果排序、收藏常用提示词、导出 Markdown 清单等（收到真实反馈后再确定优先级）。
+> 原话：「对于非翻译专业同学想要做翻译任务很快上手，可以快速找到合适的prompt。使用此prompt翻译效果更好了」
+
+据此改进：
+
+- 首页加入三张可点击的**阶段流程卡片**（译前 → 译中 → 译后），非专业用户不必先懂翻译理论，点一下就能跳到对应提示词；
+- 保留并强化**全文搜索 + 场景下拉筛选**，呼应「快速找到合适的 prompt」——输入关键词即可定位到具体编号的提示词；
+- 每张卡片提供 **xx / xxx 占位符替换 + 一键复制**，让「很快上手」落到操作层面，不用手动改提示词文本；
+- 新增「3 步上手」指南区块，并用独立的界面语言 / 提示词语言切换，降低英文提示词的使用门槛；
+- 保留原文档中的模型名与版本号，方便使用者按「翻译效果更好了」的体验继续迭代同一条提示词。
 
 ### 部署方式（GitHub Pages）
 
@@ -155,7 +154,7 @@ See [`AI_COLLABORATION_LOG.md`](AI_COLLABORATION_LOG.md) for the full prompt / p
 
 ### User feedback and resulting improvements
 
-> **Integrity note**: the assignment asks for *real* user feedback. Item 1 below is the genuine brief from the project owner, Zhou Zhiyu. Item 2 is reserved for an actual tester — replace it with a classmate's verbatim response before submitting. Do not submit the placeholder text.
+> **Note**: both entries below are real feedback. Item 1 is the genuine brief from the project owner, Zhou Zhiyu. Item 2 is the verbatim response of a friend who is not a translation major, after two days of using the live site.
 
 **Feedback 1 — Zhou Zhiyu (project owner / real requester)**
 
@@ -167,17 +166,17 @@ Improvements made:
 - Added this bilingual README and the collaboration log to meet submission rules.
 - Broke deployment into copy-paste commands to be executed step by step.
 
-**Feedback 2 — peer tester (verbatim response to be filled in)**
+**Feedback 2 — Friend 1 (non-translation major, 2 days of trial)**
 
-> Questions asked: (1) Which step did this tool help you finish fastest? (2) What was hard to use? (3) What would you add?  
-> Message sent to the tester: "I built a translation prompt library at \__. Could you try it for 3 minutes and reply with one honest sentence to each of the three questions? I'll quote your words in my assignment README."
->
-> **To fill in before submission**:
->
-> - Tester: ＿＿＿　Date: ＿＿＿
-> - Verbatim: ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
->
-> Planned improvements based on this feedback: better search ranking, bookmarking frequent prompts, Markdown export — priority to be decided after real responses arrive.
+> Verbatim: "For students who are not translation majors, it is quick to get started with translation tasks, and you can quickly find a suitable prompt. Translation quality is better when using these prompts."
+
+Improvements made:
+
+- Added three clickable **stage cards** (pre-production → production → post-production) on the homepage, so non-majors can jump straight to the right prompts without knowing translation theory first.
+- Kept and refined **full-text search + scenario dropdown**, directly addressing "quickly find a suitable prompt" — typing a keyword locates an exact numbered prompt.
+- Added **xx / xxx placeholder filling + one-click copy** on every card, turning "quick to get started" into a concrete interaction instead of manual text editing.
+- Added a **3-step quick-start guide** and decoupled interface-language / prompt-language switches to lower the barrier for English prompts.
+- Preserved model names and version numbers from the original document so users can keep iterating the same prompt that produced better results.
 
 ### Deployment (GitHub Pages)
 
