@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TransPrompt Bank — a bilingual translation prompt library for pre-production, production and post-production workflows.">
+  <title>TransPrompt Bank · 译提示词库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="TransPrompt Bank home">
+      <span class="brand-mark">译</span>
+      <span class="brand-text">
+        <strong>TransPrompt Bank</strong>
+        <small data-i18n="brandSub">译提示词库 · LLM Assignment 1</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#workflow" data-i18n="navWorkflow">工作流</a>
+      <a href="#explorer" data-i18n="navBrowse">提示词库</a>
+      <a href="#meta">Meta Prompts</a>
+      <a href="#guide" data-i18n="navGuide">使用指南</a>
+    </nav>
+    <button class="ui-lang-btn" id="uiLangBtn" type="button" aria-label="Switch interface language">EN</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="heroEyebrow">LLM ASSIGNMENT 1 · TRANSLATION WORKFLOW</span>
+        <h1 data-i18n="heroTitle">把翻译流程，变成可复制的提示词</h1>
+        <p class="hero-desc" data-i18n="heroDesc">从译前背景调研、译中生成润色，到译后复盘反馈。54 条提示词、3 个工作阶段、中英双版本，按场景随取随用。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#explorer" data-i18n="ctaBrowse">开始浏览提示词</a>
+          <a class="btn btn-ghost" href="#guide" data-i18n="ctaGuide">3 步上手 →</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mock-window">
+          <div class="mock-head"><span></span><span></span><span></span><em>prompt_01.txt</em></div>
+          <div class="mock-body">
+            <p class="mock-label">01 · PRE-PRODUCTION</p>
+            <p class="mock-text" data-i18n="mockPrompt">在翻译之前，找到文章来源、并整理相关背景知识。然后一段话快速告诉我这篇文章讲了什么？</p>
+            <div class="mock-tags"><span>Gemini-3.7-flash</span><span>v3.0</span><span>text</span></div>
+          </div>
+          <div class="mock-foot"><span class="mock-copy" data-i18n="mockCopy">复制到剪贴板</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <section class="section" id="workflow">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="workflowTitle">一条完整的翻译流水线</h2>
+        <p data-i18n="workflowDesc">点击任意阶段，直接筛选对应提示词。</p>
+      </div>
+      <div class="workflow-grid" id="workflowGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="explorer">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="explorerTitle">提示词浏览器</h2>
+        <p data-i18n="explorerDesc">按阶段、场景和语言筛选；填入 xxx 后一键复制，直接发给你的大模型。</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input id="searchInput" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="搜索提示词、场景、模型…">
+        </div>
+        <div class="chips" id="stageChips" role="group" aria-label="Stage filter"></div>
+        <div class="toolbar-row">
+          <div class="segmented" id="promptLangSwitch" role="group" aria-label="Prompt language">
+            <button type="button" data-lang="cn" class="active">中文提示词</button>
+            <button type="button" data-lang="en">English Prompts</button>
+          </div>
+          <select id="scenarioSelect" aria-label="Scenario filter"></select>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+      </div>
+
+      <div class="cards" id="promptCards"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">⌕</div>
+        <p data-i18n="emptyText">没有匹配的提示词，试试换个关键词或筛选条件。</p>
+        <button class="btn btn-ghost" id="resetBtn" type="button" data-i18n="resetFilters">重置筛选</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="meta">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="metaTitle">两个 Meta Prompt：让提示词自己进化</h2>
+        <p data-i18n="metaDesc">一个把粗糙想法升级成专业提示词，一个诊断并优化已有提示词。均含中英版本。</p>
+      </div>
+      <div class="meta-grid" id="metaGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="guideTitle">怎么用（3 步）</h2>
+        <p data-i18n="guideDesc">这个网站不调用任何 API，也不需要登录——它是一份可直接取用的提示词工具书。</p>
+      </div>
+      <div class="steps">
+        <article class="step"><span class="step-num">1</span><h3 data-i18n="step1Title">选阶段</h3><p data-i18n="step1Text">从译前 / 译中 / 译后三个流水线阶段中挑选，或用搜索框直接找关键词。</p></article>
+        <article class="step"><span class="step-num">2</span><h3 data-i18n="step2Title">填占位符</h3><p data-i18n="step2Text">在卡片下方把 xx / xxx 替换为你的文本或主题，复制时会自动替换。</p></article>
+        <article class="step"><span class="step-num">3</span><h3 data-i18n="step3Title">粘贴到你的 LLM</h3><p data-i18n="step3Text">复制到 DeepSeek、Gemini、GPT、Grok 等任意模型，搭配记录的版本号迭代你的提示词。</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p data-i18n="footerText">TransPrompt Bank · 5317 LLM Assignment 1 · 周芝宇</p>
+    <p class="footer-note" data-i18n="footerNote">静态站点 · 无需登录 · 数据来自 Assignment 1 Prompt Bank</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
