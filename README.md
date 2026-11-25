@@ -1,7 +1,7 @@
 [README.md](https://github.com/user-attachments/files/35402033/README.md)
 # TransPrompt Bank · 译提示词库
 
-> 在线访问 / Live demo：`<部署后填入：https://<你的用户名>.github.io/translation-prompt-bank/>`
+> 在线访问 / Live demo：**https://zhiyuzhou166-dev.github.io/translation-prompt-bank/**
 
 一个把翻译工作流（译前 → 译中 → 译后）整理成可检索、可筛选、可一键复制的提示词工具站。纯静态页面，无需登录、无需 API Key。
 
